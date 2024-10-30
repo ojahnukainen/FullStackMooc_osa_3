@@ -1,0 +1,30 @@
+{
+  "name": "fullstackmooc_osa_3",
+  "version": "1.0.0",
+  "description": "Practice programm as part of the mooc full stack course",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ojahnukainen/FullStackMooc_osa_3.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Otto Jahnukainen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ojahnukainen/FullStackMooc_osa_3/issues"
+  },
+  "homepage": "https://github.com/ojahnukainen/FullStackMooc_osa_3#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
