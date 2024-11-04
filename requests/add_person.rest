@@ -1,4 +1,5 @@
-POST http://localhost:3001/api/persons
+//POST http://localhost:3001/api/persons
+POST https://fullstackmooc-osa-3.fly.dev/api/persons
 Content-Type: application/json
 
 {
