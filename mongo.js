@@ -25,22 +25,22 @@ const person = new Person({
 })
 
 const findAll = () => {
-  Person.find({}).then(result =>{
-  result.length === 0 ? console.log("Phonebook is empty") : console.log("Phonebook:")
-  result.forEach(person => {
-    console.log(person.name, person.number)
+  Person.find({}).then(result => {
+    result.length === 0 ? console.log('Phonebook is empty') : console.log('Phonebook:')
+    result.forEach(person => {
+      console.log(person.name, person.number)
+    })
+    mongoose.connection.close()
   })
-  mongoose.connection.close()
-})
 }
 
 const createNewPerson = () => {
-  person.save().then(result =>{
-  console.log(`added ${process.argv[3]} with number ${process.argv[4]} to phonebook`)
-  mongoose.connection.close()
-})
+  person.save().then(result => {
+    console.log(`added ${process.argv[3]} with number ${process.argv[4]} to phonebook`)
+    mongoose.connection.close()
+  })
 }
 
 process.argv.length > 3 ?
-createNewPerson() : findAll()
+  createNewPerson() : findAll()
 
