@@ -14,8 +14,20 @@ mongoose.connect(db_url)
   })
 
   const personSchema = new mongoose.Schema({
-    name: String,
-    number: String,
+    name: {
+      type: String,
+      minlength: 3,
+      required: true
+    },
+    number: {
+      type: String,
+      validate: {
+        validator: (v)=> {
+          return /\d{2,3}[-]\d{3,7}/.test(v)
+        },message: props => `${props.value} is not acceptable. Form should be 2-3 and - then 3-7 numbers`
+      },
+      requaired: [true, 'Number needed']
+    },
   })
   
   personSchema.set('toJSON', {
